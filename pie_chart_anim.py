@@ -77,7 +77,7 @@ def update(num):
                                       autopct='%1.1f%%', shadow=True, startangle=0)
     for text in texts + autotexts:
         text.set_color('white')  # Set text color to white for better contrast
-    ax.set_title(f"Emotion Wheele: " , color='white')  # Set title color to white
+    ax.set_title(f"EMOTION WHEEL: " , color='white')  # Set title color to white
     plt.text(0, -1.5,get_max_emo_from_data(max_Data), ha='center', va='center', fontsize=12, color='white')
 
 # Create the animation
