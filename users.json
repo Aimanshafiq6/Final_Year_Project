@@ -1,14 +1,28 @@
 [
     {
-        "username":"admin",
-        "password":"admin"
+        "username": "admin",
+        "password": "admin"
     },
     {
-        "username":"maliha",
-        "password":"starship"
+        "username": "maliha",
+        "password": "starship"
     },
     {
-        "username":"wajiha",
-        "password":"qwerty"
+        "username": "wajiha",
+        "password": "qwerty"
+    },
+    {
+        "username": "saturn",
+        "password": "qwerty",
+        "DOB": "2000-02-25",
+        "age": "23",
+        "gender": "Male"
+    },
+    {
+        "username": "sarah",
+        "password": "computer",
+        "DOB": "1992-05-16",
+        "age": "25",
+        "gender": "Female"
     }
 ]

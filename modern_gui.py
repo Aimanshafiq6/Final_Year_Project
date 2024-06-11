@@ -91,6 +91,13 @@ login_root.geometry("300x300")
 VALID_USERNAME = "user"
 VALID_PASSWORD = "pass"
 
+
+def open_sign_up_wondow():
+    login_root.destroy()
+    import subprocess
+    subprocess.run(["..\\env\\Scripts\\python.exe",".\\signup_window.py"])
+    
+
 def open_questionnaire_window():
     login_root.destroy()
     
@@ -332,13 +339,17 @@ password_label.pack(pady=5)
 password_entry = ctk.CTkEntry(login_root, show="*")
 password_entry.pack(pady=5)
 
-# Create a label to show error messages
-error_label = ctk.CTkLabel(login_root, text="", fg_color="red")
-error_label.pack(pady=5)
+# # Create a label to show error messages
+# error_label = ctk.CTkLabel(login_root, text="", fg_color="red")
+# error_label.pack(pady=5)
 
 # Create a login button
 login_button = ctk.CTkButton(login_root, text="Login", command=lambda: validate_login(username_entry.get(), password_entry.get()))
 login_button.pack(pady=10)
+
+# create a sign up label
+signup_button = ctk.CTkButton(login_root, text="sign up", command=open_sign_up_wondow)
+signup_button.pack(pady=10)
 
 # Create a Guest Login in button
 guest_button = ctk.CTkButton(login_root, text="Guest User", command=open_questionnaire_window)
