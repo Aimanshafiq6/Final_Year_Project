@@ -13,7 +13,7 @@ class SignupWindow(ctk.CTk):
         super().__init__()
 
         self.title("Sign Up Form")
-        self.geometry("360x400")
+        self.geometry("360x430")
 
         # Create and place the widgets
         self.create_widgets()
@@ -49,19 +49,19 @@ class SignupWindow(ctk.CTk):
 
         # Age Entry
         self.age_label = ctk.CTkLabel(self, text="Age:")
-        self.age_label.grid(row=4, column=0, padx=10, pady=10)
+        self.age_label.grid(row=5, column=0, padx=10, pady=10)
         self.age_entry = ctk.CTkEntry(self)
-        self.age_entry.grid(row=4, column=1, padx=10, pady=10)
+        self.age_entry.grid(row=5, column=1, padx=10, pady=10)
 
         # Gender Options
         self.gender_label = ctk.CTkLabel(self, text="Gender:")
-        self.gender_label.grid(row=5, column=0, padx=10, pady=10)
+        self.gender_label.grid(row=6, column=0, padx=10, pady=10)
         self.gender_option = ctk.CTkOptionMenu(self, values=["Male", "Female", "Other"])
-        self.gender_option.grid(row=5, column=1, padx=10, pady=10)
+        self.gender_option.grid(row=6, column=1, padx=10, pady=10)
 
         # Submit Button
         self.submit_button = ctk.CTkButton(self, text="Submit", command=self.submit_form)
-        self.submit_button.grid(row=6, column=0, columnspan=2, pady=20)
+        self.submit_button.grid(row=7, column=0, columnspan=2, pady=20)
 
     def submit_form(self):
         name = self.name_entry.get()
