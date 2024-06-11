@@ -157,6 +157,7 @@ def open_questionnaire_window():
 
 
     def submit_answers():
+        responses = [ happy_entry.get() , sad_entry.get(), angry_entry.get(), fear_entry.get(), surprise_entry.get()]
         happy_response = happy_entry.get()
         sad_response = sad_entry.get()
         angry_response = angry_entry.get()
@@ -189,6 +190,9 @@ def open_questionnaire_window():
     guest_root.mainloop()
 
 def start_face_detection():
+    from transformers import pipeline
+
+    classifer = pipeline('text-classification',model='bhadresh-savani/distilbert-base-uncased-emotion');
     # Initialize the CustomTkinter window
     root = ctk.CTk()
     root.title("OpenCV Face Detection with CustomTkinter")
@@ -262,9 +266,11 @@ def start_face_detection():
 
     # Function to detect emotion from text
     def detect_emotion():
+        
         user_text = text_entry.get("1.0", ctk.END).strip()
-        emotion = detect_emotion_from_text(user_text)
-        emotion_label.configure(text=f"Emotion: {emotion}")
+        
+        emotion = classifer(user_text)
+        emotion_label.configure(text=f"Emotion: {emotion[0]['label']}")
 
     # Function to record audio and submit to dummy function
     def record_audio():
