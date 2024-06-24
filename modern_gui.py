@@ -98,6 +98,19 @@ def open_sign_up_wondow():
     subprocess.run(["..\\env\\Scripts\\python.exe",".\\signup_window.py"])
     
 
+
+def open_bool_question_window():
+     # Function to run the animation chart
+    # this is a hack solution.
+    def run_bool_question_window():
+        login_root.destroy()
+        import subprocess
+        command_list = ["..\\env\\Scripts\\python.exe",".\\bool_res_questions.py"]
+        for cmd in data_emotion_list:
+            command_list.append(str(cmd))
+        subprocess.run(command_list)
+
+
 def open_questionnaire_window():
     login_root.destroy()
     
