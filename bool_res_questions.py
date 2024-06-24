@@ -88,6 +88,14 @@ def normalize_percentages(percentage_responses):
 
 # Function to save responses to a JSON file
 def save_responses():
+    root.destroy()
+    def run_piechart_animation(data_emotion_list:list):
+        
+        import subprocess
+        command_list = ["..\\env\\Scripts\\python.exe",".\\pie_chart_anim.py"]
+        for cmd in data_emotion_list:
+            command_list.append(str(cmd))
+        subprocess.run(command_list)
     # Ensure all questions have a response
     for item in questions_with_emotions:
         question = item["question"]
@@ -102,6 +110,10 @@ def save_responses():
 
     normalized_per1 = normalize_percentages(calculate_percentage_responses(count_emotion_responses(responses)))
     print(normalized_per1);
+
+    run_piechart_animation([normalized_per1['happiness'],normalized_per1['sadness'],
+                             normalized_per1['anger'],normalized_per1['fear'], 
+                             normalized_per1['surprise']])
 
 # Function to handle checkbox click
 def on_checkbox_click(question, emotion, response_var):

@@ -1,11 +1,11 @@
 [
     {
-        "question": "Did you enjoy your vacation?",
+        "question": "Are you happy with your current job?",
         "emotion": "happiness",
         "response": "Yes"
     },
     {
-        "question": "Are you happy with your current job?",
+        "question": "Did you enjoy your vacation?",
         "emotion": "happiness",
         "response": "Yes"
     },
@@ -25,19 +25,39 @@
         "response": "Yes"
     },
     {
-        "question": "Are you feeling sad today?",
+        "question": "Do you feel lonely sometimes?",
         "emotion": "sadness",
         "response": "Yes"
+    },
+    {
+        "question": "Are you angry about the recent news?",
+        "emotion": "anger",
+        "response": "Yes"
+    },
+    {
+        "question": "Did someone make you upset today?",
+        "emotion": "anger",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you frustrated with your work situation?",
+        "emotion": "anger",
+        "response": "Yes"
+    },
+    {
+        "question": "Did you have a disagreement with someone?",
+        "emotion": "anger",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you feeling sad today?",
+        "emotion": "sadness",
+        "response": "No"
     },
     {
         "question": "Did something upset you recently?",
         "emotion": "sadness",
-        "response": "Yes"
-    },
-    {
-        "question": "Do you feel lonely sometimes?",
-        "emotion": "sadness",
-        "response": "Yes"
+        "response": "No"
     },
     {
         "question": "Do you miss someone right now?",
@@ -47,26 +67,6 @@
     {
         "question": "Are you feeling down because of the weather?",
         "emotion": "sadness",
-        "response": "No"
-    },
-    {
-        "question": "Are you angry about the recent news?",
-        "emotion": "anger",
-        "response": "No"
-    },
-    {
-        "question": "Did someone make you upset today?",
-        "emotion": "anger",
-        "response": "No"
-    },
-    {
-        "question": "Are you frustrated with your work situation?",
-        "emotion": "anger",
-        "response": "No"
-    },
-    {
-        "question": "Did you have a disagreement with someone?",
-        "emotion": "anger",
         "response": "No"
     },
     {

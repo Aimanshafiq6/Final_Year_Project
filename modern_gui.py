@@ -106,9 +106,10 @@ def open_bool_question_window():
         login_root.destroy()
         import subprocess
         command_list = ["..\\env\\Scripts\\python.exe",".\\bool_res_questions.py"]
-        for cmd in data_emotion_list:
-            command_list.append(str(cmd))
+        
         subprocess.run(command_list)
+
+    run_bool_question_window()
 
 
 def open_questionnaire_window():
@@ -279,10 +280,11 @@ def start_face_detection():
 
     # Function to detect emotion from text
     def detect_emotion():
-        
+        from autocorrect import Speller
+        spell = Speller()
         user_text = text_entry.get("1.0", ctk.END).strip()
-        
-        emotion = classifer(user_text)
+       
+        emotion = classifer(spell(user_text))
         emotion_label.configure(text=f"Emotion: {emotion[0]['label']}")
 
     # Function to record audio and submit to dummy function
@@ -371,7 +373,7 @@ signup_button = ctk.CTkButton(login_root, text="sign up", command=open_sign_up_w
 signup_button.pack(pady=10)
 
 # Create a Guest Login in button
-guest_button = ctk.CTkButton(login_root, text="Guest User", command=open_questionnaire_window)
+guest_button = ctk.CTkButton(login_root, text="Guest User", command=open_bool_question_window)
 guest_button.pack(pady=10)
 # Run the CustomTkinter event loop for login
 login_root.mainloop()
