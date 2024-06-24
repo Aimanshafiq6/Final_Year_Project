@@ -1,0 +1,127 @@
+[
+    {
+        "question": "Did you enjoy your vacation?",
+        "emotion": "happiness",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you happy with your current job?",
+        "emotion": "happiness",
+        "response": "Yes"
+    },
+    {
+        "question": "Do you feel satisfied with your achievements?",
+        "emotion": "happiness",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you looking forward to the weekend?",
+        "emotion": "happiness",
+        "response": "Yes"
+    },
+    {
+        "question": "Did you have a good day today?",
+        "emotion": "happiness",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you feeling sad today?",
+        "emotion": "sadness",
+        "response": "Yes"
+    },
+    {
+        "question": "Did something upset you recently?",
+        "emotion": "sadness",
+        "response": "Yes"
+    },
+    {
+        "question": "Do you feel lonely sometimes?",
+        "emotion": "sadness",
+        "response": "Yes"
+    },
+    {
+        "question": "Do you miss someone right now?",
+        "emotion": "sadness",
+        "response": "No"
+    },
+    {
+        "question": "Are you feeling down because of the weather?",
+        "emotion": "sadness",
+        "response": "No"
+    },
+    {
+        "question": "Are you angry about the recent news?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Did someone make you upset today?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Are you frustrated with your work situation?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Did you have a disagreement with someone?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Are you annoyed by the traffic?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Are you afraid of the dark?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Do you worry about the future?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Are you scared of heights?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Do you feel anxious about your health?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Are you concerned about your safety?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Did the surprise party make you happy?",
+        "emotion": "surprise",
+        "response": "No"
+    },
+    {
+        "question": "Were you surprised by the announcement?",
+        "emotion": "surprise",
+        "response": "No"
+    },
+    {
+        "question": "Did the unexpected gift delight you?",
+        "emotion": "surprise",
+        "response": "No"
+    },
+    {
+        "question": "Were you shocked by the sudden change?",
+        "emotion": "surprise",
+        "response": "No"
+    },
+    {
+        "question": "Did the news catch you off guard?",
+        "emotion": "surprise",
+        "response": "No"
+    }
+]
