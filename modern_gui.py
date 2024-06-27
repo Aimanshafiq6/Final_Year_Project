@@ -7,7 +7,7 @@ import text_sentiment_analysis
 from scipy.io.wavfile import write
 import time
 import sounddevice as sd
-import os
+import sys
 import speech_recognition as sr
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import json
@@ -95,7 +95,7 @@ VALID_PASSWORD = "pass"
 def open_sign_up_wondow():
     login_root.destroy()
     import subprocess
-    subprocess.run(["..\\env\\Scripts\\python.exe",".\\signup_window.py"])
+    subprocess.run([sys.executable,".\\signup_window.py"])
     
 
 
@@ -105,7 +105,7 @@ def open_bool_question_window():
     def run_bool_question_window():
         login_root.destroy()
         import subprocess
-        command_list = ["..\\env\\Scripts\\python.exe",".\\bool_res_questions.py"]
+        command_list = [sys.executable,".\\bool_res_questions.py"]
         
         subprocess.run(command_list)
 
@@ -164,7 +164,7 @@ def open_questionnaire_window():
     def run_piechart_animation(data_emotion_list:list):
         guest_root.destroy()
         import subprocess
-        command_list = ["..\\env\\Scripts\\python.exe",".\\pie_chart_anim.py"]
+        command_list = [sys.executable,".\\pie_chart_anim.py"]
         for cmd in data_emotion_list:
             command_list.append(str(cmd))
         subprocess.run(command_list)
@@ -283,8 +283,11 @@ def start_face_detection():
         from autocorrect import Speller
         spell = Speller()
         user_text = text_entry.get("1.0", ctk.END).strip()
-       
-        emotion = classifer(spell(user_text))
+        text_entry.delete(1.0,ctk.END)
+
+        corrected_text = spell(user_text)
+        text_entry.insert(ctk.END,corrected_text)
+        emotion = classifer(corrected_text)
         emotion_label.configure(text=f"Emotion: {emotion[0]['label']}")
 
     # Function to record audio and submit to dummy function
