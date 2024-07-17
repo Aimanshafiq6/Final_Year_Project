@@ -15,39 +15,24 @@
         "response": "Yes"
     },
     {
+        "question": "Do you worry about the future?",
+        "emotion": "fear",
+        "response": "Yes"
+    },
+    {
+        "question": "Are you concerned about your safety?",
+        "emotion": "fear",
+        "response": "Yes"
+    },
+    {
         "question": "Are you looking forward to the weekend?",
         "emotion": "happiness",
-        "response": "Yes"
+        "response": "No"
     },
     {
         "question": "Did you have a good day today?",
         "emotion": "happiness",
-        "response": "Yes"
-    },
-    {
-        "question": "Do you feel lonely sometimes?",
-        "emotion": "sadness",
-        "response": "Yes"
-    },
-    {
-        "question": "Are you angry about the recent news?",
-        "emotion": "anger",
-        "response": "Yes"
-    },
-    {
-        "question": "Did someone make you upset today?",
-        "emotion": "anger",
-        "response": "Yes"
-    },
-    {
-        "question": "Are you frustrated with your work situation?",
-        "emotion": "anger",
-        "response": "Yes"
-    },
-    {
-        "question": "Did you have a disagreement with someone?",
-        "emotion": "anger",
-        "response": "Yes"
+        "response": "No"
     },
     {
         "question": "Are you feeling sad today?",
@@ -70,6 +55,31 @@
         "response": "No"
     },
     {
+        "question": "Do you feel lonely sometimes?",
+        "emotion": "sadness",
+        "response": "No"
+    },
+    {
+        "question": "Are you angry about the recent news?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Did someone make you upset today?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Are you frustrated with your work situation?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
+        "question": "Did you have a disagreement with someone?",
+        "emotion": "anger",
+        "response": "No"
+    },
+    {
         "question": "Are you annoyed by the traffic?",
         "emotion": "anger",
         "response": "No"
@@ -80,22 +90,12 @@
         "response": "No"
     },
     {
-        "question": "Do you worry about the future?",
-        "emotion": "fear",
-        "response": "No"
-    },
-    {
         "question": "Are you scared of heights?",
         "emotion": "fear",
         "response": "No"
     },
     {
         "question": "Do you feel anxious about your health?",
-        "emotion": "fear",
-        "response": "No"
-    },
-    {
-        "question": "Are you concerned about your safety?",
         "emotion": "fear",
         "response": "No"
     },
