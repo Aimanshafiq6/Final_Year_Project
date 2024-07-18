@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from tkinter import messagebox
 import json
+import sys
 
 # Initialize the main window
 ctk.set_appearance_mode("dark")  # Set dark mode
@@ -92,7 +93,7 @@ def save_responses():
     def run_piechart_animation(data_emotion_list:list):
         
         import subprocess
-        command_list = ["..\\env\\Scripts\\python.exe",".\\pie_chart_anim.py"]
+        command_list = [sys.executable,".\\pie_chart_anim.py"]
         for cmd in data_emotion_list:
             command_list.append(str(cmd))
         subprocess.run(command_list)
