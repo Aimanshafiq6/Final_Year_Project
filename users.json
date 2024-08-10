@@ -24,5 +24,16 @@
         "DOB": "1992-05-16",
         "age": "25",
         "gender": "Female"
+    },
+    {
+        "username": "fitz",
+        "password": "mkultra",
+        "DOB": [
+            12,
+            3,
+            2
+        ],
+        "age": 25,
+        "gender": "Male"
     }
 ]
