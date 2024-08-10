@@ -15,54 +15,44 @@
         "response": "Yes"
     },
     {
-        "question": "Do you worry about the future?",
-        "emotion": "fear",
-        "response": "Yes"
-    },
-    {
-        "question": "Are you concerned about your safety?",
-        "emotion": "fear",
-        "response": "Yes"
-    },
-    {
         "question": "Are you looking forward to the weekend?",
         "emotion": "happiness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Did you have a good day today?",
         "emotion": "happiness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Are you feeling sad today?",
         "emotion": "sadness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Did something upset you recently?",
         "emotion": "sadness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Do you miss someone right now?",
         "emotion": "sadness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Are you feeling down because of the weather?",
         "emotion": "sadness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Do you feel lonely sometimes?",
         "emotion": "sadness",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Are you angry about the recent news?",
         "emotion": "anger",
-        "response": "No"
+        "response": "Yes"
     },
     {
         "question": "Did someone make you upset today?",
@@ -90,12 +80,22 @@
         "response": "No"
     },
     {
+        "question": "Do you worry about the future?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
         "question": "Are you scared of heights?",
         "emotion": "fear",
         "response": "No"
     },
     {
         "question": "Do you feel anxious about your health?",
+        "emotion": "fear",
+        "response": "No"
+    },
+    {
+        "question": "Are you concerned about your safety?",
         "emotion": "fear",
         "response": "No"
     },

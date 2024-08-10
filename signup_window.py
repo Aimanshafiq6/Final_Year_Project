@@ -24,7 +24,7 @@ class SignupWindow(ctk.CTk):
 
     def create_widgets(self):
          # Heading Label
-        self.heading_label = ctk.CTkLabel(self, text="Sign Up", font=("Helvetica", 24, "bold"))
+        self.heading_label = ctk.CTkLabel(self, text=" Welcome !", text_color="#601E88", anchor="w", justify="left", font=("Helvetica", 24, "bold"))
         self.heading_label.grid(row=1, column=0, columnspan=2, pady=20)
 
         # Name Entry
