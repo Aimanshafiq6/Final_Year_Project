@@ -53,11 +53,20 @@ class WordCounter:
         self.max_count = 0
 
 class app(ctk.CTk):
-    def __init__(self):
+    def __init__(self,age_group):
         super().__init__()
 
         self.title("VibeVision")
         self.geometry("1090x690")
+
+        
+
+        if age_group < 14:
+            self.age_range = "kid"
+        else:
+            self.age_range = "teen"
+        
+        print(self.age_range)
 
         # TODO:
         # 1. Integrate speech to text in GUI
@@ -178,7 +187,7 @@ class app(ctk.CTk):
         self.render_home()
         self.select_frame_by_name("home")
 
-    def play_vid(self):
+    def play_vid(self,emotion):
         import webbrowser
         import random
         file_path = "./recom_vids.json"
@@ -188,16 +197,17 @@ class app(ctk.CTk):
                 data = json.load(file)
             
             # Extract the URLs and select a random one
-            urls = data.get("urls", [])
-            if urls:
-                random_url = random.choice(urls)
-                
-                # Open the URL in the default web browser
-                webbrowser.open(random_url)
-                print(f"Opening: {random_url}")
+            
+            if self.age_range == "kid":
+                urls = data.get("kid")
             else:
-                print("No URLs found in the file.")
-    
+                urls = data.get(emotion)
+            random_url = random.choice(urls)
+                
+            # Open the URL in the default web browser
+            webbrowser.open(random_url)
+            print(f"Opening: {random_url}")
+            
         except FileNotFoundError:
             print(f"Error: File '{file_path}' not found.")
         except json.JSONDecodeError:
@@ -230,11 +240,14 @@ class app(ctk.CTk):
         recom_button.pack(padx=120,pady=10)
         if self.isCameraNetwork:
             print("yeah its active")
+            # IP camera se ahe ga
             self.video_url = self.camera_url + "/video"
             cap = cv2.VideoCapture(self.video_url)
         else:
             print("wrong cam")
+            # laptop ka camera
             cap = cv2.VideoCapture(0)
+
          # Load the pre-trained face detection model
         face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
         last_face_detected_time = time.time()
@@ -277,10 +290,36 @@ class app(ctk.CTk):
                         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 4)
                         cv2.putText(frame, detected_emotion, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
                         
-                        if self.accumulator.get_count("sad") >= 4 or self.accumulator.get_count("angry") >= 3 or self.accumulator.get_count("fear") >= 2:
-                            print("got here!!")
-                            toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid())
-                            self.accumulator.zero_all_counts()
+                        
+                        if self.age_range == "kid":
+                            if self.accumulator.get_count("happy") >= 4 or self.accumulator.get_count("surprise"):
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid())
+                                self.accumulator.zero_all_counts()
+                            if self.accumulator.get_count("sad") >= 4 or self.accumulator.get_count("angry") >= 3 or self.accumulator.get_count("fear") >= 2:
+                                print("got here!!")
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid())
+                                self.accumulator.zero_all_counts()
+                        else:
+                            if self.accumulator.get_count("happy") >= 4:
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid("happy"))
+                                self.accumulator.zero_all_counts()
+                            
+                            if self.accumulator.get_count("angry") >= 4:
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid("happy"))
+                                self.accumulator.zero_all_counts()
+
+                            if self.accumulator.get_count("surprise") >= 4:
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid("surprise"))
+                                self.accumulator.zero_all_counts()
+
+                            if self.accumulator.get_count("sad") >= 4:
+                                print("got here!!")
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid("sad"))
+                                self.accumulator.zero_all_counts()
+
+                            if self.accumulator.get_count("fear") >= 4:
+                                toast('Vibe Vision', 'You seems a bit sad, should i suggest a video that would help you up?', on_click=lambda args: self.play_vid("fear"))
+
                     else:
                         elepsed_time = time.time() - last_face_detected_time
                         if elepsed_time > 15:

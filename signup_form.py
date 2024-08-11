@@ -121,7 +121,7 @@ class SignUpForm:
         elif password != confirm_password:
             messagebox.showerror("Error", "Passwords do not match!")
         else:
-            new_user = {"username": name, "password": password, "DOB":dob, "age":25, "gender":gender}
+            new_user = {"username": name, "password": password, "DOB":dob, "age":age, "gender":gender}
             self.save_user(new_user)
             messagebox.showinfo("Success", "Sign Up Successful!")
             self.app.destroy()
